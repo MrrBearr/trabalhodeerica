@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Função Afim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 Jogo da Função Afim</h1>
+            <p>Aprenda funções do primeiro grau de forma divertida!</p>
+        </header>
+
+        <div class="game-info">
+            <div class="score">
+                <span>Pontuação: <span id="score">0</span></span>
+            </div>
+            <div class="level">
+                <span>Nível: <span id="level">1</span></span>
+            </div>
+            <div class="lives">
+                <span>Vidas: <span id="lives">❤️❤️❤️</span></span>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="controls-panel">
+                <h3>Controles da Função</h3>
+                <div class="function-display">
+                    <h2>f(x) = <span id="coef-a">1</span>x + <span id="coef-b">0</span></h2>
+                </div>
+                
+                <div class="slider-group">
+                    <label for="slider-a">Coeficiente Angular (a):</label>
+                    <input type="range" id="slider-a" min="-5" max="5" step="0.1" value="1">
+                    <span id="value-a">1</span>
+                </div>
+                
+                <div class="slider-group">
+                    <label for="slider-b">Coeficiente Linear (b):</label>
+                    <input type="range" id="slider-b" min="-10" max="10" step="0.5" value="0">
+                    <span id="value-b">0</span>
+                </div>
+
+                <div class="challenge-area">
+                    <h3>Desafio Atual</h3>
+                    <p id="challenge-text">Ajuste a função para passar pelos pontos destacados!</p>
+                    <button id="check-answer">Verificar Resposta</button>
+                    <button id="next-level" style="display: none;">Próximo Nível</button>
+                </div>
+            </div>
+
+            <div class="graph-container">
+                <canvas id="graph" width="500" height="400"></canvas>
+                <div class="graph-info">
+                    <p><strong>Dicas:</strong></p>
+                    <ul>
+                        <li><strong>Coeficiente a:</strong> Determina a inclinação da reta</li>
+                        <li><strong>Coeficiente b:</strong> Determina onde a reta corta o eixo Y</li>
+                        <li><strong>Se a > 0:</strong> Função crescente</li>
+                        <li><strong>Se a < 0:</strong> Função decrescente</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="theory-section">
+            <h3>📚 Teoria - Função Afim</h3>
+            <div class="theory-content">
+                <p><strong>Função Afim:</strong> f(x) = ax + b, onde a ≠ 0</p>
+                <ul>
+                    <li><strong>a:</strong> Coeficiente angular (inclinação da reta)</li>
+                    <li><strong>b:</strong> Coeficiente linear (intercepto no eixo y)</li>
+                    <li><strong>Zero da função:</strong> x = -b/a</li>
+                    <li><strong>Domínio:</strong> ℝ (todos os números reais)</li>
+                    <li><strong>Imagem:</strong> ℝ (todos os números reais)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h3>🎯 Como Jogar</h3>
+            <ol>
+                <li>Use os controles deslizantes para ajustar os coeficientes a e b</li>
+                <li>Observe como a função muda no gráfico</li>
+                <li>Complete os desafios fazendo a reta passar pelos pontos indicados</li>
+                <li>Ganhe pontos e avance de nível!</li>
+            </ol>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
