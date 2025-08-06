@@ -57,7 +57,7 @@ class LinearFunctionGame {
         this.valueA.textContent = this.currentA.toFixed(1);
         this.valueB.textContent = this.currentB.toFixed(1);
         this.coefA.textContent = this.currentA.toFixed(1);
-        this.coefB.textContent = this.currentB >= 0 ? this.currentB.toFixed(1) : this.currentB.toFixed(1);
+        this.coefB.textContent = this.currentB >= 0 ? `+ ${this.currentB.toFixed(1)}` : `- ${Math.abs(this.currentB).toFixed(1)}`;
     }
 
     drawGraph() {
