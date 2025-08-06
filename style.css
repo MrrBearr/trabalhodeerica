@@ -294,3 +294,20 @@ button:active {
     25% { transform: translateX(-5px); }
     75% { transform: translateX(5px); }
 }
+
+/* Footer */
+.credits {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.credits p {
+    color: #4a5568;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 0;
+}
